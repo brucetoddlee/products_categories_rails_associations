@@ -33,7 +33,7 @@ class ProductsController < ApplicationController
     product = Product.find(id)
     product.update(new_params)
 
-    add_categories = []
+    add_cats = []
 
     unless params[:cats].nil? || params[:cats]["add"].nil?
       params[:cats]["add"].each do |cat|
@@ -42,7 +42,7 @@ class ProductsController < ApplicationController
       end
     end
 
-    remove_categories = []
+    remove_cats = []
 
     unless params[:cats].nil? || params[:cats]["remove"].nil?
       params[:cats]["remove"].each do |cat|
