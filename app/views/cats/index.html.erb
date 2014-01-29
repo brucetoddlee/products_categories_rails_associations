@@ -1,0 +1,10 @@
+<h3>Categories</h3>
+<ul>
+  <% @cats.each do |c| %>
+    <li>
+      <%= link_to c.name, cat_path(c) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= button_to 'New Category', new_cat_path, method: 'get' %>

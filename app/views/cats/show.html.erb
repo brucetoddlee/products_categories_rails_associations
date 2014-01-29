@@ -1,0 +1,11 @@
+<h4><%= @cat.name %></h4>
+
+<h5>Products in this category:</h5>
+<ul>
+<% @products.each do |p| %>
+  <li>
+    <%= link_to p.name, product_path(p) %> 
+  </li>
+<% end %>
+
+<%= button_to "Edit Category", edit_cat_path(@cat), method: 'get' %>

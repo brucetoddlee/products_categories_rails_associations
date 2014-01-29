@@ -1,0 +1,11 @@
+<h1>Edit Category</h1>
+
+<%= form_for @cat do |c| %>
+
+    <%= c.text_field  :name %> <br>
+
+    <%= c.submit %>
+
+<% end %>
+
+<%= button_to 'Delete', cat_path(@cat), :method => 'delete' %>
